@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinergia Digital | IA en Ingeniería y Mercadeo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config for Dark Mode -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Transiciones suaves para el modo oscuro */
+        .transition-theme { transition: background-color 0.3s ease, color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-theme min-h-screen flex flex-col">
+
+    <!-- Navegación -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm transition-theme">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Título Corto -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-bold text-xl tracking-tight text-blue-600 dark:text-blue-400">SinergiaDigital.</a>
+                </div>
+                <!-- Menú y Botón Dark Mode -->
+                <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                    <a href="#inicio" class="text-sm sm:text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Inicio</a>
+                    <a href="#articulo1" class="text-sm sm:text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Ingeniería</a>
+                    <a href="#articulo2" class="text-sm sm:text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Mercadeo</a>
+                    
+                    <!-- Toggle Dark Mode -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Cambiar modo">
+                        <!-- Icono Luna (para modo claro) -->
+                        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <!-- Icono Sol (para modo oscuro) -->
+                        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.32a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-1.32 4.22a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.415 0zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.22-1.32a1 1 0 01-1.415 0l-.708-.708a1 1 0 011.414-1.414l.708.708a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm1.32-4.22a1 1 0 010-1.415l.708-.708a1 1 0 011.414 1.414l-.708.708a1 1 0 01-1.415 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-900 dark:to-gray-800 text-white py-20 px-4 transition-theme text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Sinergia Digital</h1>
+            <p class="text-xl md:text-2xl font-light text-blue-100 mb-8">Código, Marcas y el Futuro con IA</p>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- Sección: Inicio (Sobre Nosotros) -->
+        <section id="inicio" class="scroll-mt-24">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 md:p-12 transition-theme border border-gray-100 dark:border-gray-700">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-3">
+                    <span class="w-8 h-1 bg-blue-600 rounded-full inline-block"></span>
+                    Sobre este espacio
+                </h2>
+                <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                    Bienvenidos. Somos un equipo multidisciplinario en formación en la <strong>Corporación Unificada Nacional de Educación Superior (CUN)</strong>, combinando las visiones de la Ingeniería de Software y el Mercadeo y la Publicidad. En este espacio analizamos la evolución de nuestro entorno laboral frente a la Inteligencia Artificial. Nuestra postura central es clara: <span class="font-semibold text-blue-600 dark:text-blue-400">la IA no reemplaza al profesional, sino que actúa como un puente estratégico que acelera la creación tecnológica en el desarrollo de soluciones y potencia la hiperpersonalización en la conexión con el consumidor.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección: Artículo 1 (Ingeniería) -->
+        <section id="articulo1" class="scroll-mt-24">
+            <article class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-theme">
+                <img src="https://msmk.university/wp-content/uploads/2024/11/imagen-de-inteligencia-artificial.webp" alt="Código e Inteligencia Artificial" class="w-full h-48 md:h-64 object-cover">
+                <div class="p-8 md:p-10">
+                    <span class="text-sm font-semibold tracking-wider text-blue-600 uppercase mb-2 block">Ingeniería de Software</span>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">Más allá del código: La IA como arquitecto y asistente en el desarrollo de software</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-8 font-medium">Por: David Alejandro Aparicio Romero</p>
+                    
+                    <div class="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                        <p>Durante décadas, la métrica principal de un programador fue su capacidad para memorizar sintaxis y escribir líneas de código a gran velocidad. Sin embargo, la llegada de la Inteligencia Artificial (IA) generativa ha cambiado las reglas del juego. Hoy en día, la tesis es clara: la IA no está diseñada para reemplazar al ingeniero de software, sino para actuar como un copiloto avanzado que transforma al programador tradicional en un verdadero arquitecto de soluciones.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6">La automatización como motor de eficiencia</h4>
+                        <p>El impacto más evidente de la IA en nuestra rutina profesional es la aceleración de los procesos de desarrollo. Herramientas basadas en modelos de lenguaje extenso (LLM) son capaces de autocompletar bloques de código, detectar errores de sintaxis en tiempo real y sugerir refactorizaciones eficientes. De hecho, datos empíricos respaldan esta mejora: estudios recientes de plataformas como GitHub revelan que los desarrolladores que utilizan asistentes de IA como Copilot pueden completar sus tareas hasta un <strong>55% más rápido (GitHub, 2022)</strong>. Esto significa que el tiempo que antes se invertía en depurar un simple error de punto y coma, ahora se invierte en diseñar algoritmos más escalables.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6">De "Picador de código" a Pensador Crítico</h4>
+                        <p>Al delegar las tareas repetitivas y mecánicas a la máquina, el rol del ingeniero evoluciona. La IA nos permite enfocarnos en el "qué" y el "por qué" de un proyecto, en lugar de quedarnos estancados en el "cómo". El ingeniero moderno utiliza su energía mental para estructurar bases de datos complejas, asegurar la integración de sistemas y garantizar que el software resuelva problemas reales de los usuarios con una arquitectura sólida.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6">El riesgo de la dependencia ciega (Contraargumento)</h4>
+                        <p>No obstante, el uso de la IA en la programación trae consigo un riesgo significativo: la fe ciega en el código autogenerado. Un contraargumento fuerte frente a la adopción masiva de estas herramientas es la introducción de vulnerabilidades de seguridad y el fenómeno de las "alucinaciones" de la IA (cuando la máquina inventa librerías o funciones que no existen). Si un estudiante o un profesional junior copia y pega código sin comprender su lógica subyacente, el resultado será un sistema frágil, difícil de mantener y propenso a fallos catastróficos. La IA sugiere, pero la responsabilidad del despliegue sigue siendo 100% humana.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6">Conclusión</h4>
+                        <p>En conclusión, la Inteligencia Artificial es el mejor aliado que un desarrollador de software puede tener en la actualidad, siempre y cuando se utilice con criterio. La verdadera habilidad del ingeniero del futuro no será saber escribir código desde cero, sino saber formular las preguntas correctas (prompt engineering), auditar las respuestas de la IA y conectar esos bloques lógicos para construir software seguro, innovador y eficiente.</p>
+                    </div>
+
+                    <!-- Referencias -->
+                    <div class="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400">
+                        <h5 class="font-bold uppercase tracking-wider mb-3 text-gray-800 dark:text-gray-300">Referencias Bibliográficas:</h5>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Bender, E. M., et al. (2021). On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? <em>Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency.</em></li>
+                            <li>GitHub. (2022). <em>Research: quantifying GitHub Copilot’s impact on developer productivity and happiness.</em> Recuperado del blog oficial de GitHub.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección: Artículo 2 (Mercadeo) -->
+        <section id="articulo2" class="scroll-mt-24">
+            <article class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-theme">
+                <img src="https://elcomercio.pe/resizer/v2/SVKX2DU2ZNA4HPFR4WRFBU3QLI.png?auth=c5cb64813064b6a820a4b79820d1edce4d2bd6af15dd0d5ba216593954670c6d&width=980&height=535&quality=75&smart=true" alt="Mercadeo e Inteligencia Artificial" class="w-full h-48 md:h-64 object-cover">
+                <div class="p-8 md:p-10">
+                    <span class="text-sm font-semibold tracking-wider text-pink-600 uppercase mb-2 block">Mercadeo y Publicidad</span>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">Algoritmos que conectan: La hiperpersonalización y la ética en la publicidad impulsada por IA</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-8 font-medium">Por: Nicolas Montenegro Aparicio</p>
+                    
+                    <div class="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                        <p>En el competitivo mundo del marketing y la publicidad, la atención del consumidor es el recurso más escaso. Frente a este panorama, la tesis que define nuestro sector es contundente: la Inteligencia Artificial no es una amenaza para la creatividad humana, sino el motor que permite llevar la hiperpersonalización a una escala masiva, optimizando presupuestos y prediciendo el comportamiento del mercado.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6">Segmentación y creación en tiempo real</h4>
+                        <p>Históricamente, las campañas publicitarias dependían de la intuición y de estudios de mercado que tardaban meses en procesarse. Hoy, la IA permite analizar millones de puntos de datos en segundos para entregar el anuncio correcto, a la persona correcta, en el momento exacto. Además, la IA generativa está revolucionando la creación de copys y bocetos visuales. Según informes recientes de HubSpot (2023), el <strong>61% de los profesionales del marketing ya utilizan IA</strong> para generar contenido y optimizar sus estrategias de SEO, lo que reduce drásticamente los tiempos de lanzamiento de las campañas y mejora el Retorno de Inversión (ROI).</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6">El estratega detrás del algoritmo</h4>
+                        <p>Con la IA asumiendo la recolección de datos y la creación de variaciones de anuncios para pruebas A/B, el publicista deja de ser un simple ejecutor para convertirse en un estratega comportamental. La herramienta procesa los números, pero el profesional define el tono de voz, la narrativa de la marca (storytelling) y el objetivo emocional de la campaña.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6">La homogeneización y la privacidad (Contraargumento)</h4>
+                        <p>A pesar de estas ventajas, existe un riesgo evidente: la pérdida de autenticidad. Un contraargumento recurrente es que, si todas las marcas utilizan las mismas herramientas generativas, la publicidad corre el riesgo de volverse genérica y robótica. A esto se suma el delicado debate ético sobre la privacidad; el uso de algoritmos predictivos puede cruzar la línea hacia la manipulación o la invasión de la intimidad del usuario si no se regulan adecuadamente los datos de origen.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6">Conclusión</h4>
+                        <p>La automatización puede simular voces e imágenes, pero no puede empatizar. El futuro del mercadeo pertenece a los profesionales que utilicen la IA para potenciar la precisión de sus campañas, sin perder la sensibilidad humana y ética que realmente conecta a una marca con el corazón de su audiencia.</p>
+                    </div>
+
+                    <!-- Referencias -->
+                    <div class="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400">
+                        <h5 class="font-bold uppercase tracking-wider mb-3 text-gray-800 dark:text-gray-300">Referencias Bibliográficas:</h5>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>HubSpot. (2023). <em>State of AI in Marketing Report.</em> Recuperado del portal de recursos de HubSpot.</li>
+                            <li>Kotler, P., Kartajaya, H., & Setiawan, I. (2021). <em>Marketing 5.0: Technology for Humanity.</em> John Wiley & Sons.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center transition-theme mt-12 border-t-4 border-blue-600">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="font-medium text-gray-300 mb-2">Proyecto Final: Actividad de Construcción Aplicada (ACA)</p>
+            <p class="text-sm mb-4">Informática y Convergencia Tecnológica - CUN</p>
+            <p class="text-xs">&copy; <span id="year"></span> Creado por David Aparicio y Nicolas Montenegro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Lógica de Modo Oscuro y Utilidades con JavaScript -->
+    <script>
+        // Actualizar año del footer automáticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Lógica de Modo Oscuro
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Función para cambiar los iconos según el tema
+        function updateIcons(isDark) {
+            if (isDark) {
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            } else {
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            }
+        }
+
+        // Comprobar preferencias guardadas o de sistema al cargar
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            updateIcons(true);
+        } else {
+            document.documentElement.classList.remove('dark');
+            updateIcons(false);
+        }
+
+        // Evento de clic en el botón de tema
+        themeToggleBtn.addEventListener('click', function() {
+            // Cambiar clase en HTML
+            document.documentElement.classList.toggle('dark');
+            
+            const isDarkNow = document.documentElement.classList.contains('dark');
+            
+            // Guardar preferencia
+            if (isDarkNow) {
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                localStorage.setItem('color-theme', 'light');
+            }
+            
+            // Actualizar iconos
+            updateIcons(isDarkNow);
+        });
+    </script>
+</body>
+</html>
